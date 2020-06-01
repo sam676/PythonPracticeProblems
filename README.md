@@ -7,3 +7,5 @@ https://myrobin.io/
 https://app.codility.com/programmers/
 
 https://projecteuler.net/
+
+https://codingcompetitions.withgoogle.com/kickstart
