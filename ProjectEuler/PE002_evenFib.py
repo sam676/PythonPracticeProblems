@@ -14,13 +14,15 @@ do not exceed four million, find the sum of the even-valued terms.
 def evenFib(n):
     i = a = 1
     b = 2
+    sum = 0
     while i < n:
         if (a % 2 == 0):
-            print(a)
+            sum += a
         i += 1
         c = a + b
         a = b
-        b = c  
+        b = c 
+    return sum 
             
 #driver
-evenFib(4000000)
+print("the sum is: " + str(evenFib(4000000)))
