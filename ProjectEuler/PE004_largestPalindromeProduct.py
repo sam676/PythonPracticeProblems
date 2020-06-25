@@ -8,15 +8,20 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
 def palindromeNumber():
-    product = 0
-    palindrome = 0
-    for x in range(1000):
-        for y in range(1000):
+    maxProduct = 0
+    for x in range(999, 99, -1):
+        for y in range(x, 99, -1):
             product = x * y
-            reverse = str(product)[::-1]
-            if product == int(reverse):
-                palindrome = product
-    return palindrome
+            if (product < maxProduct):
+                break
+            number = product
+            reverse = 0
+            while (number != 0): 
+                reverse = reverse * 10 + number % 10
+                number = number // 10
+            if ((product == reverse) and (product > maxProduct)):
+                maxProduct = product        
+    return maxProduct
 
 #driver
 print(palindromeNumber())
